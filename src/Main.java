@@ -13,6 +13,7 @@ public class Main {
         zoo.setAnimal2(animal2);
         zoo.setZooKeeper(zookeeper1);
         zoo.setZooKeeper2(zookeeper2);
+        animal1.WhoIsOlder(animal2);
         zoo.display();
     }
 }
