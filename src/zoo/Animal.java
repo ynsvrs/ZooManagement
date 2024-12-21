@@ -35,9 +35,9 @@ public class Animal {
     }
     public boolean WhoIsOlder(Animal secondanimal) {
         if (this.age > secondanimal.age) {
-            System.out.println(this.name + " is older than" + secondanimal.name);
+            System.out.println(this.name + " is older than " + secondanimal.name);
         } else if (this.age < secondanimal.age) {
-            System.out.println(this.name + " is younger than" + secondanimal.name);
+            System.out.println(this.name + " is younger than " + secondanimal.name);
         } else {
             System.out.println(this.name + " and " + secondanimal.name + "are the same age");
         }
