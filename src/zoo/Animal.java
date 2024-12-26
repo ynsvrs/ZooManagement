@@ -1,15 +1,16 @@
 package zoo;
 
 public class Animal {
-    private String name;
-    private int age;
-    private String habitat;
-
     public Animal(String name, int age, String habitat) {
         this.name = name;
         this.age = age;
         this.habitat = habitat;
     }
+    private String name;
+    private int age;
+    private String habitat;
+
+
     public String getName() {
         return name;
     }

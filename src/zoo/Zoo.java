@@ -1,15 +1,20 @@
 package zoo;
 
 public class Zoo {
+    public Zoo(){
+
+    }
+    public Zoo(String name){
+        this.name = name;
+    }
+
     private String name;
     private Animal animal1;
     private Animal animal2;
     private ZooKeeper zooKeeper1;
     private ZooKeeper zooKeeper2;
 
-    public Zoo(String name){
-        this.name = name;
-    }
+
     public void setAnimal(Animal animal){
         animal1 = animal;
     }
