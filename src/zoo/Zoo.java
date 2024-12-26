@@ -18,14 +18,26 @@ public class Zoo {
     public void setAnimal(Animal animal){
         animal1 = animal;
     }
+    public void getAnimal(){
+        System.out.println(animal1);
+    }
     public void setAnimal2(Animal animal){
         animal2 = animal;
+    }
+    public void getAnimal2(){
+        System.out.println(animal2);
     }
     public void setZooKeeper(ZooKeeper zooKeeper){
         zooKeeper1 = zooKeeper;
     }
+    public void getZooKeeper(){
+        System.out.println(zooKeeper1);
+    }
     public void setZooKeeper2(ZooKeeper zooKeeper){
         zooKeeper2 = zooKeeper;
+    }
+    public void getZooKeeper2(){
+        System.out.println(zooKeeper2);
     }
     public void display(){
         System.out.println("Zoo Name: " + this.name);
