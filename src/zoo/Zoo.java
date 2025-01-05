@@ -1,23 +1,42 @@
 package zoo;
 
 public class Zoo {
-    private String name;
-    private String origin;
-    private Animal[] animals;
+    public Zoo() {}
 
-    // Constructor for Zoo
-    public Zoo(String name, String origin, Animal[] animals) {
+    public Zoo(String name, Animal[] animals) {
         this.name = name;
-        this.origin = origin;
         this.animals = animals;
     }
 
-    // Get and display available animals
+    private String name;
+    private Animal[] animals;
+
+
     public void getAvailableAnimals() {
-        System.out.println("Available animals in the zoo " + this.name + ":");
+        System.out.println("Available animals at " + this.name + ":");
         for (Animal animal : animals) {
-            animal.display();
+            System.out.println("Name: " + animal.getName());
+            System.out.println("Age: " + animal.getAge());
+            System.out.println("Habitat: " + animal.getHabitat());
+            System.out.println();  // Add a blank line for readability
         }
     }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public Animal[] getAnimals() {
+        return this.animals;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAnimals(Animal[] animals) {
+        this.animals = animals;
+    }
 }
+
 

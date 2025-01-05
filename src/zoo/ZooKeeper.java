@@ -1,31 +1,27 @@
 package zoo;
 
 public class ZooKeeper {
-    private String name;
-    private int age;
-    private Animal animal;
 
-    // Constructor for ZooKeeper
-    public ZooKeeper(String name, int age, Animal animal) {
+    public ZooKeeper() {}
+
+    public ZooKeeper(String name, int age) {
         this.name = name;
         this.age = age;
-        this.animal = animal;
     }
 
-    // Getters and Setters
+    private String name;
+    private int age;
+
+
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public int getAge() {
-        return this.age;
+        return age;
     }
 
-    public Animal getAnimal() {
-        return this.animal;
-    }
 
-    // Setters
     public void setName(String name) {
         this.name = name;
     }
@@ -34,22 +30,18 @@ public class ZooKeeper {
         this.age = age;
     }
 
-    public void setAnimal(Animal animal) {
-        this.animal = animal;
-    }
 
-    // Display information for the assigned animal
-    public String getAnimalFullInfo() {
-        return (this.getName() + " is taking care of " + this.animal.getName());
-    }
-
-    // Check if the zoo keeper is older than another
-    public void isOlderThan(ZooKeeper zooKeeper) {
-        if (this.age > zooKeeper.getAge()) {
-            System.out.println(this.name + " is older than " + zooKeeper.getName());
+    public void isOlderThan(ZooKeeper otherZookeeper) {
+        if (this.age > otherZookeeper.getAge()) {
+            System.out.println(this.name + " is older than " + otherZookeeper.getName());
         } else {
-            System.out.println(this.name + " is not older than " + zooKeeper.getName());
+            System.out.println(this.name + " is not older than " + otherZookeeper.getName());
         }
     }
-}
 
+
+    public void display() {
+        System.out.println("Zookeeper name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
