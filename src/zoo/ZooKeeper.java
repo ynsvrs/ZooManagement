@@ -23,10 +23,12 @@ public class ZooKeeper {
 
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public void setAge(int age) {
+
         this.age = age;
     }
 
@@ -44,4 +46,27 @@ public class ZooKeeper {
         System.out.println("Zookeeper name: " + name);
         System.out.println("Age: " + age);
     }
+    @Override
+    public String toString() {
+        return "ZooKeeper{name='" + name + "', age=" + age + '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ZooKeeper zooKeeper = (ZooKeeper) o;
+
+        if (age != zooKeeper.age) return false;
+        return name.equals(zooKeeper.name);
+    }
+    @Override
+    public int hashCode() {
+        int result = name.hashCode();
+        result = 31 * result + age;
+        return result;
+    }
 }
+
+

@@ -1,12 +1,13 @@
 import zoo.Animal;
 import zoo.Zoo;
 import zoo.ZooKeeper;
+import zoo.Mammal;
 
 public class Main {
     public static void main(String[] args) {
         Animal[] animals = new Animal[3];
-        animals[0] = new Animal("Panda", 5, "forest");
-        animals[1] = new Animal("Lion", 15, "desert");
+        animals[0] = new Mammal("Panda", 5, "forest", true);
+        animals[1] = new Mammal("Lion", 15, "desert", true);
         animals[2] = new Animal("Elephant", 25, "savannah");
 
         Zoo[] zoos = new Zoo[2];

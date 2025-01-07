@@ -2,7 +2,8 @@ package zoo;
 
 public class Animal {
 
-    public Animal() {}
+    public Animal() {
+    }
 
 
     public Animal(String name, int age, String habitat) {
@@ -41,9 +42,27 @@ public class Animal {
     }
 
 
-    public void display() {
-        System.out.println("Animal name: " + name);
-        System.out.println("Animal age: " + age);
-        System.out.println("Animal habitat: " + habitat);
+    @Override
+    public String toString() {
+        return "Animal{name='" + name + "', age=" + age + ", habitat='" + habitat + "'}";
     }
+
+
+@Override
+public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null || getClass() != obj.getClass()) return false;
+    Animal animal = (Animal) obj;
+    return age == animal.age && name.equals(animal.name) && habitat.equals(animal.habitat);
 }
+
+@Override
+public int hashCode() {
+    int result = name.hashCode();
+    result = 31 * result + age;
+    result = 31 * result + habitat.hashCode();
+    return result;
+}
+}
+
+
