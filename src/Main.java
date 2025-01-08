@@ -10,6 +10,10 @@ public class Main {
         animals[1] = new Mammal("Lion", 15, "desert", true);
         animals[2] = new Animal("Elephant", 25, "savannah");
 
+        for (Animal animal : animals) {
+            animal.makeSound(); // Polymorphism in action
+        }
+
         Zoo[] zoos = new Zoo[2];
         zoos[0] = new Zoo("Astana Zoo", animals);
         zoos[1] = new Zoo("Safari Park", animals);

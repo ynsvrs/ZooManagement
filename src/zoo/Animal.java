@@ -41,6 +41,9 @@ public class Animal {
         this.habitat = habitat;
     }
 
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
 
     @Override
     public String toString() {

@@ -13,6 +13,10 @@ public class Mammal extends Animal {
     public void setHasFur(boolean hasFur) {
         this.hasFur = hasFur;
     }
+    @Override
+    public void makeSound() {
+        System.out.println("Mammal makes a sound");
+    }
 
     @Override
     public String toString() {
