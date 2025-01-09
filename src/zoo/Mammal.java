@@ -15,7 +15,7 @@ public class Mammal extends Animal {
     }
     @Override
     public void makeSound() {
-        System.out.println("Mammal makes a sound");
+        System.out.println("Mammal makes a mammal sound");
     }
 
     @Override
