@@ -1,6 +1,6 @@
 package zoo;
 
-public class Animal {
+public abstract class Animal {
 
     public Animal() {
     }
@@ -41,9 +41,8 @@ public class Animal {
         this.habitat = habitat;
     }
 
-    public void makeSound() {
-        System.out.println("Animal makes a sound");
-    }
+    public abstract void makeSound();
+
 
     @Override
     public String toString() {

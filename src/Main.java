@@ -8,10 +8,10 @@ public class Main {
         Animal[] animals = new Animal[3];
         animals[0] = new Mammal("Panda", 5, "forest", true);
         animals[1] = new Mammal("Lion", 15, "desert", true);
-        animals[2] = new Animal("Elephant", 25, "savannah");
+        animals[2] = new Mammal("Elephant", 25, "savannah", false);
 
         for (Animal animal : animals) {
-            animal.makeSound(); // Polymorphism in action
+            animal.makeSound();
         }
 
         Zoo[] zoos = new Zoo[2];
